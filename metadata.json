@@ -1,0 +1,6 @@
+{
+  "name": "Mindprint 3D - Neural Stencil Matrix",
+  "description": "3D interactive brain network visualization in black and white stencil aesthetic with clickable neural nodes, evidence-backed patterns, and AI mindprint generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
