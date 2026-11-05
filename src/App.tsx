@@ -15,6 +15,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('All patterns');
   const [autoRotate, setAutoRotate] = useState<boolean>(true);
   const [visualStyle, setVisualStyle] = useState<BrainVisualStyle>('bw-stencil');
+  const [heatmapMode, setHeatmapMode] = useState<boolean>(false);
   const [isAiModalOpen, setIsAiModalOpen] = useState<boolean>(false);
   const [isCodeModalOpen, setIsCodeModalOpen] = useState<boolean>(false);
   const [resetCameraTrigger, setResetCameraTrigger] = useState<number>(0);
@@ -62,6 +63,8 @@ export default function App() {
         onToggleAutoRotate={() => setAutoRotate(!autoRotate)}
         visualStyle={visualStyle}
         onChangeVisualStyle={setVisualStyle}
+        heatmapMode={heatmapMode}
+        onToggleHeatmap={() => setHeatmapMode((prev) => !prev)}
       />
 
       {/* Category Filter Tabs Row (Matches Screenshot 1) */}
@@ -84,6 +87,8 @@ export default function App() {
               autoRotate={autoRotate}
               visualStyle={visualStyle}
               resetCameraTrigger={resetCameraTrigger}
+              heatmapMode={heatmapMode}
+              onToggleHeatmap={() => setHeatmapMode((prev) => !prev)}
             />
           </div>
 
